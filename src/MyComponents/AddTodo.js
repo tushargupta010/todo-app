@@ -45,7 +45,7 @@ export const AddTodo = (props) => {
             id="exampleInputDesc"
           />
         </div>
-        <button type="submit" class="btn btn-sm btn-success">
+        <button type="submit" className="btn btn-sm btn-success">
           Add Todo
         </button>
       </form>

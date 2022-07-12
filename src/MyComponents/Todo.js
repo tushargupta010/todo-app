@@ -13,6 +13,7 @@ export const Todo = ({ todo, onDelete }) => {
       >
         Delete
       </button>
+      <hr />
     </div>
   );
 };
