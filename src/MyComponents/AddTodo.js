@@ -7,17 +7,18 @@ export const AddTodo = (props) => {
     e.preventDefault();
     if (!title || !desc) {
       alert("Title or Description cann't be blank.");
+    } else {
+      props.addTodo(title, desc);
+      setTitle("");
+      setDesc("");
     }
-    props.addTodo(title, desc);
-    setTitle("");
-    setDesc("");
   };
   return (
     <div className="container my-3">
       <h3>Add a Todo</h3>
       <form onSubmit={submit}>
-        <div class="mb-3">
-          <label htmlFor="exampleInputTitle" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputTitle" className="form-label">
             Title
           </label>
           <input
@@ -26,12 +27,12 @@ export const AddTodo = (props) => {
             onChange={(e) => {
               setTitle(e.target.value);
             }}
-            class="form-control"
+            className="form-control"
             id="exampleInputTitle"
           />
         </div>
-        <div class="mb-3">
-          <label htmlFor="exampleInputDesc" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputDesc" className="form-label">
             Description
           </label>
           <input
@@ -40,7 +41,7 @@ export const AddTodo = (props) => {
             onChange={(e) => {
               setDesc(e.target.value);
             }}
-            class="form-control"
+            className="form-control"
             id="exampleInputDesc"
           />
         </div>
